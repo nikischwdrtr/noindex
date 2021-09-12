@@ -325,7 +325,8 @@ for filename in os.listdir(newpath):
 
 # move og videos
 shutil.move(ogvideo, './og/'+ogvideo)
-shutil.move('./nometa.avi', './og/nometa.avi')
+os.remove('./nometa.avi')
+shutil.copyfile('./noindex.py', './og/noindex.py')
 
 print (" ")
 print (">>> 5/5 bake videos")
