@@ -1,2 +1,2 @@
-# noscript
+# noindex
 python datamoshing script
