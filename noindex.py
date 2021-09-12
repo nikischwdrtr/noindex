@@ -38,7 +38,7 @@ print (" ")
 print "how long sequences for cutting?"
 end = input("> sequence lengths in seconds: ")
 print (" ")
-print "choose mode (void, random, reverse, invert, bloom, pulse, jiggle, overlape, exponential, swap)"
+print "choose mode (void, random, reverse, invert, bloom, pulse, jiggle, overlape)"
 mode = raw_input("> mode: ")
 print (" ")
 print "keep the first frame? (0 = no, 1 = yes)"
@@ -262,7 +262,6 @@ for filename in os.listdir(newpath):
             final = lista + ([clean[frame]]*repeat) + listb
 
         if mode == 'pulse':
-            print('> step 3/5 : mode pulse')
             pulselen = int(countframes)
             pulseryt = int(positframes)
             j = 0
@@ -277,26 +276,16 @@ for filename in os.listdir(newpath):
                     j = j + 1
 
         if mode == "jiggle":
-            print('> step 3/5 : mode jiggle')
             #print('*needs debugging lol help thx*') # didn't pandy's branch fix this?
             amount = int(positframes)
             final = [clean[constrain(x+int(random.gauss(0,amount)),0,len(clean)-1)] for x in range(0,len(clean))]
 
         if mode == "overlap":
-            print('> step 3/5 : mode overlap')
             pulselen = int(countframes)
             pulseryt = int(positframes)
 
             clean = [clean[i:i+pulselen] for i in range(0,len(clean),pulseryt)]
             final = [item for sublist in clean for item in sublist]
-
-        if mode == 'exponential':
-            print('> step 3/5 : mode exponential')
-            print('sorry, currently not implemented. using void..')	
-
-        if mode == 'swap':
-            print('> step 3/5 : mode swap')
-            print('sorry, currently not implemented. using void..')	
 
         #name new file
         cname = '-c' + str(countframes) if int(countframes) > 1 else '' 
