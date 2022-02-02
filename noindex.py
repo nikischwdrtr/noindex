@@ -10,7 +10,7 @@ print ("| | | | | (_) | | | | | (_| |  __/>  <   |")
 print ("| |_| |_|\___/|_|_| |_|\__,_|\___/_/\_\  |")
 print ("|________________________________________|")
 print ("|                                        |")
-print ("| noindex.py v0.1 2021                   |")
+print ("| noindex.py v0.2 2021                   |")
 print ("| \ \ avi compressor                     |")
 print ("|                                        |")
 print ("|________________________________________|")
@@ -25,28 +25,28 @@ print ("__________________________________________")
 
 # input settings
 print (" ")
-print "video width"
+print ("video width")
 w = input("> value: ")
 print (" ")
-print "height"
+print ("height")
 h = input("> value: ")
 print (" ")
-print "algorythm (neighbor or lanczos)"
+print ("algorythm (neighbor or lanczos)")
 algo = input("> value: ")
 print (" ")
-print "motion method (dia)"
+print ("motion method (dia)")
 mm = input("> value: ")
 print (" ")
-print "bitrate"
+print ("bitrate")
 bit = input("> value: ")
 print (" ")
-print "threshold"
+print ("threshold")
 thr = input("> value: ")
 print (" ")
-print "iframes"
+print ("iframes")
 ifr = input("> value: ")
 print (" ")
-print "GOD"
+print ("GOD")
 god = input("> value: ")
 print (" ")
 
