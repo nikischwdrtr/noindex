@@ -26,28 +26,28 @@ print ("__________________________________________")
 # input settings
 print (" ")
 print "video width"
-w = raw_input("> value: ")
+w = input("> value: ")
 print (" ")
 print "height"
-h = raw_input("> value: ")
+h = input("> value: ")
 print (" ")
 print "algorythm (neighbor or lanczos)"
-algo = raw_input("> value: ")
+algo = input("> value: ")
 print (" ")
 print "motion method (dia)"
-mm = raw_input("> value: ")
+mm = input("> value: ")
 print (" ")
 print "bitrate"
-bit = raw_input("> value: ")
+bit = input("> value: ")
 print (" ")
 print "threshold"
-thr = raw_input("> value: ")
+thr = input("> value: ")
 print (" ")
 print "iframes"
-ifr = raw_input("> value: ")
+ifr = input("> value: ")
 print (" ")
 print "GOD"
-god = raw_input("> value: ")
+god = input("> value: ")
 print (" ")
 
 print ("__________________________________________")
