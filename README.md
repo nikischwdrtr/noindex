@@ -2,6 +2,7 @@
 python script for compressing .mp4 files
 
 todos:
--error handling
--simple cut editor
--putting videos together
+- readme
+- error handling
+- simple cut editor
+- putting videos together
