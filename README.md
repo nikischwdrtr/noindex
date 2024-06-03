@@ -1,4 +1,7 @@
 # noindex
+
+<img width="1792" alt="Screenshot 2024-05-20 at 18 46 30" src="https://github.com/nikischwdrtr/noindex/assets/40233850/351cbfb4-3df8-4b14-8682-375769fda1b6">
+
 as an artist working with video and image processing, i strive to automate as much of the process as possible. this is the current state of my process. my goal is to consolidate everything i've done into a cohesive workflow/program that i can use and share with others. feel free to contribute in any kind, everything appreciated, copyleft and also check my other repos for other scripts/code.
 
 ## Overview
@@ -47,9 +50,10 @@ The script can be executed with various command-line arguments to perform differ
 - `-comb` : Enter video paths comma-separated for combining
 
 #### Notes
-noindex.py has to be in the same folder as the videos atm. The log of ffmpeg ist putted on mute, so if nothing happened, check your prompt.
+noindex.py has to be in the same folder as the videos atm. the log of ffmpeg ist putted on mute, so if nothing happened, check your prompt.
 
 ### Examples
+Compress video and delete Iframes
 ```bash
 python3 noindex.py -i input.mp4 -vw 1280 -vh 720 -sa lanczos -c libx264 -b 1000 -sc 40 -gop 250 -noa -nom -o output.mp4
 ```
