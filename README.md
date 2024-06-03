@@ -4,6 +4,8 @@
 
 as an artist working with video and image processing, i strive to automate as much of the process as possible. this is the current state of my process. my goal is to consolidate everything i've done into a cohesive workflow/program that i can use and share with others. feel free to contribute in any kind, everything appreciated, copyleft and also check my other repos for other scripts/code.
 
+below the readme with instructions, written by chatgpt,through reading my python script.
+
 ## Overview
 `noindex.py` is a versatile MP4 compressor designed to handle various video processing tasks, including video compression, iframe removal, baking videos, and combining videos. This script utilizes `ffmpeg` to perform its operations.
 
@@ -23,10 +25,7 @@ as an artist working with video and image processing, i strive to automate as mu
     ```bash
     git clone https://github.com/yourusername/your-repo-name.git
     ```
-2. Navigate to the directory:
-    ```bash
-    cd your-repo-name
-    ```
+2. Copy the noindex.py file wherever you need
 
 ## Usage
 The script can be executed with various command-line arguments to perform different tasks. Below are the available arguments:
