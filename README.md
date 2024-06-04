@@ -74,6 +74,7 @@ python3 noindex.py -comb "video1.mp4,video2.mp4" -o combined.mp4
 ```
 
 ## Todos
+- avi compatibility
 - handling if certain parameters not in prompt
 - input different paths than current folder (path handling)
 - error handling (letting person know what went wrong with input)
