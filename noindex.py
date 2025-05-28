@@ -74,7 +74,7 @@ def removeIFR(video,out):
         decodedOut.append(i.decode('utf-8'))
     for idx, x in enumerate(decodedOut):
         if x.startswith('pict_type=I'):
-            iframes.append(outTerm[idx-14].decode('utf-8')[4:])
+            iframes.append(outTerm[idx-14].decode('utf-8')[22:])
     for idx, x in enumerate(iframes):
         iframes[idx] = '\,'+iframes[idx]
     if (len(iframes)==0):
@@ -128,12 +128,6 @@ def checkIFR(video):
         if x.startswith('pict_type=I'):
             iframesCheck.append(lastOut[idx-14].decode('utf-8')[4:])
     print('> '+str(len(iframesCheck))+' iframes found')
-# bake video
-def bakeVideo(video):
-    print (">> bake video")
-    output = video[:-4]+'_baked.mov'
-    nolog = ' -hide_banner -loglevel panic'
-    os.system('ffmpeg -y -i '+video+' '+output+nolog)
 # combine videos WIP
 def combineVideos(videos,out):
     print (">> combine videos")
@@ -144,9 +138,6 @@ def combineVideos(videos,out):
         output = ' '+out
     nolog = ' -hide_banner -loglevel panic'
     print(videos,output,nolog)
-# path handling
-# def handlePath(path):
-
 
 ## arguments
 # initialise args
@@ -165,7 +156,6 @@ parser.add_argument('-noi',action='store_true',help='remove iframes')
 parser.add_argument('-o',type=str,help='enter output name')
 parser.add_argument('-ifr',type=str,help='enter video path to remove iframes')
 parser.add_argument('-ifrC',type=str,help='enter video path to check for iframes')
-parser.add_argument('-bake',type=str,help='enter video path for baking')
 parser.add_argument('-comb',type=str,help='enter video paths comma separated')
 args = parser.parse_args()
 # set args
@@ -183,7 +173,6 @@ noi = args.noi
 out = args.o
 ifrRemove = args.ifr
 ifrCheck = args.ifrC
-bakeI = args.bake
 videos = args.comb
 
 ## handling arguments
@@ -193,7 +182,5 @@ if (ifrRemove != None):
     removeIFR(ifrRemove,out)
 if (ifrCheck != None):
     checkIFR(ifrCheck)
-if (bakeI != None):
-    bakeVideo(bakeI)
 if (videos != None):
     combineVideos(videos,out)
